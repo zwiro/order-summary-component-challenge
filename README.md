@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/order-summary-component-challenge-flexbox-and-grid-RW8NCb9KmR)
+- Live Site URL: [Live Site](https://zwiro.github.io/order-summary-component-challenge/)
 
 ## My process
 
