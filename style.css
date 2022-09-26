@@ -1,0 +1,184 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+html {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: var(--pale-blue);
+    height: 100vh;
+
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header,
+main {
+    width: min(80%, 24rem);
+    box-shadow: 0px 8px 20px -5px var(--dark-blue);
+    border-radius: 1rem 1rem 0 0;
+}
+
+header img {
+    height: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2.5rem;
+    text-align: center;
+    border-radius: 0 0 1rem 1rem;
+    margin: 0 0 1rem 0;
+}
+
+h1 {
+    color: var(--dark-blue);
+    font-size: 1.25rem;
+    font-weight: 900;
+    padding: 2.5rem 0 1rem 0;
+}
+
+p {
+    color: var(--desaturated-blue);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.chosen-plan {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    border-radius: 0.5rem;
+    width: 115%;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-size: 0.80rem;
+}
+
+.chosen-plan img {
+    grid-column: 1 / 2;
+    grid-row: span 2;
+    margin-right: 0.75rem;
+    transition: transform 300ms ease-in-out;
+}
+
+.plan-type {
+    color: var(--dark-blue);
+    font-size: 0.8rem;
+    font-weight: 900;
+    justify-self: start;
+}
+
+.plan-price {
+    grid-column: 2 / 3;
+    justify-self: start;
+}
+
+.plan-price,
+.plan-type {
+    margin-left: 0.75rem;
+}
+
+.plan-change {
+    grid-column: 3 / 4;
+    grid-row: 1 / 4;
+    justify-self: end;
+    text-decoration: underline;
+    color: var(--bright-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding-left: 2rem;
+}
+
+button {
+    background-color: var(--bright-blue);
+    color: white;
+    font-weight: 700;
+    width: 115%;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    box-shadow: 0px 18px 42px -14px var(--bright-blue);
+}
+
+.cancellation {
+    font-weight: 700;
+    padding: 1.5rem 0;
+}
+
+.plan-change:hover {
+    text-decoration: none;
+    color: hsl(245, 75%, 70%);
+}
+
+button:hover {
+    background-color: hsl(245, 75%, 70%);
+    cursor: pointer;
+}
+
+.cancellation:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+.chosen-plan:hover img {
+    transform: rotate(360deg) scale(1.25);
+    transform-origin: center;
+
+}
+
+@media (max-width: 300px) {
+    .plan-change {
+        padding-left: 0.5rem;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-position: 0% -20%;
+    }
+
+    main {
+        padding: 0 2.25rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .plan-type {
+        font-size: 1rem;
+    }
+
+    .chosen-plan,
+    button {
+        width: 100%;
+    }
+}
